@@ -1,0 +1,6 @@
+.container {
+    max-width: $max-width;
+    margin-left: auto; // margin : 0 auto verseydik performans açısından daha kötü 4 tane görev vermiş oluyoruz...
+    margin-right: auto;
+    background-color: #fff;
+}

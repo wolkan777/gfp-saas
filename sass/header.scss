@@ -1,0 +1,17 @@
+.Header {
+    border-bottom: 1px solid #ddd;
+    background-color: rosybrown;
+    .container {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    &-menu{
+        margin-left: auto;
+        display: flex;
+    }
+}
