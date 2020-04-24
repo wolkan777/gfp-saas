@@ -1,0 +1,61 @@
+.Header {
+    border-bottom: 1px solid #ddd;
+    background-color: rosybrown;
+    .container {
+        display: flex;
+        align-items: center;
+        height: 64px;
+    }
+
+    &-menu {
+        margin-left: auto;
+        display: flex;
+        &-user {
+            margin-right: 10px;
+            display: flex;
+            a {
+                display: inline-flex; //içindeki yazıları ortalamak için
+                align-items: center;
+                padding-left: 20px; // tıklanacak alanı da böylece artırmış olduk :)))
+                padding-right: 20px;
+                height: $finger-size;
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+        }
+        &-switch {
+           color: rebeccapurple;
+        }
+        &-helper {
+            display: flex;
+            margin-left: 20px;
+            select {
+                appearance: none;
+                background-color: transparent;
+                border: 1px solid #e0e6f1;
+                padding-left: 10px;
+                padding-right: 10px;
+                height: $finger-size;
+                border-radius: 0;
+                color: $color-navy;
+
+                &:nth-child(1) {
+                    border-bottom-left-radius: $border-radius;
+                    border-top-left-radius: $border-radius;
+                }
+                &:nth-child(2) {
+                    border-left-width: 0; // css'de te bir yontem yok başka başka şeyler yazılabilirdi.
+                    border-bottom-right-radius: $border-radius;
+                    border-top-right-radius: $border-radius;
+                }
+            }
+        }
+    }
+
+    &-logo {
+        img {
+            width: 144px;
+        }
+    }
+}

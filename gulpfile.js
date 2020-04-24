@@ -5,7 +5,7 @@ var uglifycss = require('gulp-uglifycss');
 var autoprefixer = require('gulp-autoprefixer');
 
 function style() {
-    return gulp.src('./sass/main.scss')
+    return gulp.src('./scss/main.scss')
         .pipe(sass())
         .pipe(gulp.dest('./css'))
         .pipe(uglifycss({
@@ -22,7 +22,7 @@ function watch() {
             baseDir: './'
         }
     });
-    gulp.watch('./sass/*.scss', style)
+    gulp.watch('./scss/*.scss', style)
     gulp.watch('./*.html').on('change', browserSync.reload);
     gulp.watch('./js/*.js').on('change', browserSync.reload);
 }
