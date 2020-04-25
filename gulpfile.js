@@ -13,16 +13,16 @@ function style() {
         }))
         .pipe(autoprefixer())
         .pipe(gulp.dest('./dist'))
-
 }
 
 function watch() {
     browserSync.init({
+        notify: false,
         server: {
             baseDir: './'
         }
     });
-    gulp.watch('./scss/*.scss', style)
+    gulp.watch('./scss/*/*.scss', style)
     gulp.watch('./*.html').on('change', browserSync.reload);
     gulp.watch('./js/*.js').on('change', browserSync.reload);
 }

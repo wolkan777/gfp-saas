@@ -349,7 +349,7 @@ td {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #fff; }
+  padding-left: 20px; }
 
 a {
   color: #083b87; }
@@ -377,18 +377,34 @@ body {
   fill: currentColor; }
 
 .Header {
-  border-bottom: 1px solid #ddd;
-  background-color: rosybrown; }
+  border-bottom: 1px solid #ddd; }
   .Header .container {
+    position: relative;
     display: flex;
     align-items: center;
     height: 64px; }
+  .Header-switch {
+    margin-left: auto; }
+    @media (min-width: 768px) {
+      .Header-switch {
+        display: none; } }
   .Header-menu {
-    margin-left: auto;
-    display: flex; }
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media (min-width: 768px) {
+      .Header-menu {
+        display: flex;
+        margin-left: auto; } }
     .Header-menu-user {
       margin-right: 10px;
-      display: flex; }
+      display: flex;
+      flex-direction: column; }
       .Header-menu-user a {
         display: inline-flex;
         align-items: center;
@@ -397,8 +413,6 @@ body {
         height: 40px; }
         .Header-menu-user a:hover {
           background-color: #eee; }
-    .Header-menu-switch {
-      color: rebeccapurple; }
     .Header-menu-helper {
       display: flex;
       margin-left: 20px; }
