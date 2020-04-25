@@ -1,16 +1,17 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
 .container {
     max-width: $max-width;
     margin-left: auto; // margin : 0 auto verseydik performans açısından daha kötü 4 tane görev vermiş oluyoruz...
     margin-right: auto;
     padding-left: $gutter;
+    padding-right: $gutter;
 }
 
 a {
     color: $color-navy;
-}
-
-body {
-    font-family: "Open Sans", sans-serif;
 }
 
 .button {
@@ -21,18 +22,28 @@ body {
     height: $finger-size;
     color: #fff;
     font-weight: bold;
-    background-color: $color-blue;
+    background-color: transparent;
     border-radius: $border-radius;
+
+    &-icon {
+        // align-items: center;
+        color: black;
+        padding-left: 0;
+        padding-right: 0;
+        width: $finger-size;
+    }
+
+    &-blue {
+        background-color: $color-blue;
+    }
 }
 
 .icon {
+    align-items: center;
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
-  }
-  
-
-  
+}
